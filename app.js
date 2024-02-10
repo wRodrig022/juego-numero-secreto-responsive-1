@@ -28,12 +28,14 @@ function generarNumeroSecreto() {
     }
 }   
 
-function verificarIntento() {
+function intentarNumero() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     console.log(numeroDeUsuario)
     if (numeroDeUsuario === numeroSecreto) {
         asignarTextoElemento('p',`Acertaste el número en ${intentos} ${(intentos === 1) ? 'vez' : 'veces'}`);
         document.getElementById('reiniciar').removeAttribute('disabled');
+        document.getElementById('intentar').setAttribute('disabled','true');
+
     } else {
         //El usuario no acertó.
         if (numeroDeUsuario > numeroSecreto) {
@@ -72,5 +74,7 @@ function reiniciarJuego() {
     condicionesIniciales();
     //Deshabilitar el botón de nuevo juego
     document.querySelector('#reiniciar').setAttribute('disabled','true');
+    document.getElementById('intentar').removeAttribute('disabled');
+
     
 }
