@@ -1,1 +1,1 @@
-https://github.io/wRodrig022/juego-numero-secreto-responsive-1
+https://wRodrig022.github.io/juego-numero-secreto-responsive-1/
